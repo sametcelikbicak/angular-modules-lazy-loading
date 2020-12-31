@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AppComponent } from "./app.component";
+import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: () =>
       import("./lazy-module-2/lazy2.module").then(m => m.Lazy2Module)
   },
-  { component: AppComponent, path: "", pathMatch: "full" },
+  { component: HomeComponent, path: "", pathMatch: "full" },
   { path: "**", pathMatch: "full", redirectTo: "" }
 ];
 
